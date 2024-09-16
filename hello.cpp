@@ -2,9 +2,8 @@
 first test project */
 #include <iostream> 
 #include <string>
-
 using namespace std;
-void greeting(string name = "world!"){
+void greeting(string name){
 	cout<<"Hello, "<<name<<endl;
 }
 

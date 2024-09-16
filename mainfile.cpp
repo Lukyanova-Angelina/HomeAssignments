@@ -2,10 +2,16 @@
 first test project */
 #include <iostream> 
 #include <string>
-#include <headler.hpp>
+#include "headler.hpp"
 
 using namespace std;
-extern string helloo;
+
 int main(){
-	helloo = "Hello, ";
+        string nameee;
+        greeting();
+        cin>>nameee;
+	while (nameee != "End!"){
+		greeting(nameee);
+		cin>>nameee;
+	}
 }
