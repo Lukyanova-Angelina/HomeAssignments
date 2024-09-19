@@ -3,7 +3,7 @@ first test project */
 #include <iostream> 
 #include <string>
 using namespace std;
-void greeting(string name){
+void greeting(string name){ // func shows "Hello, {name}!"
 	cout<<"Hello, "<<name<<endl;
 }
 

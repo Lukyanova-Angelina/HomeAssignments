@@ -1,0 +1,2 @@
+mf: 
+	g++ mainfile.cpp hello.cpp -o makingfile

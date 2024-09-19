@@ -7,10 +7,10 @@ first test project */
 using namespace std;
 
 int main(){
-        string nameee;
-        greeting();
+        string nameee; // variable to recieve string
+        greeting(); // func from hello.cpp
         cin>>nameee;
-	while (nameee != "End!"){
+	while (nameee != "End!"){ // loop to print "Hello, {nameee}!"
 		greeting(nameee);
 		cin>>nameee;
 	}
