@@ -1,39 +1,52 @@
 #include <iostream>
 #include <string>
 #include "head.h"
+
 int main()
 {
 	std::string str;
-	std::string *mass;
-	std::getline(std::cin, str);
-	mass = new std::string[100];
-	int temprorary = 0;
-	int fp = 0;
-	int sp = 0;
-	std::string oper;
-	for (size_t i = 0; i < str.length(); i++) 
+	int *mass;
+	mass = new int[100]; // add mass
+	std::getline(std::cin, str); // read line
+	int fp = 0; // first " "
+	int sp = 0; // second " "
+	int index_mass = 0; // index of last element of mass
+	std::string oper; // part of the line
+	for (size_t i = 0; i < str.length(); i++) // loop to split lines
     {
-        if (str[i] == ' ')
+        if (str[i] == ' ') // split with " "
         {
-        	if (sp == 0)
+        	if (sp == 0) // if first " "
         	{
         		sp = i;
         		oper = str.substr(0, i);
         	}
-        	else
+        	else 
         	{
         		fp = sp;
-        		sp = i;
-        		oper = str.substr(fp + 1, sp - fp);
+        		sp = i; 
+        		oper = str.substr(fp + 1, sp - fp - 1); // cut line
         	}
-        	std::cout << oper <<std::endl;
-        	if(operand(oper))
+        	if(operand(oper)) // if number
         	{
-        		std::cout << "qeeeeee" << std::endl;
+        		mass[index_mass] = std::stoi(oper); // string -> int
+        		index_mass++;
+        	}
+        	else // if operation
+        	{
+        		func(&mass[index_mass - 1], &mass[index_mass - 2], &index_mass, &oper); // change mass
         	}
         }
-
     }
-    std::cout << str.substr(sp + 1, str.size() - sp) << std::endl;
+    oper = str.substr(sp + 1, str.size() - sp);
+    if(operand(oper)) // если число
+    {
+        mass[index_mass] = std::stoi(oper); // string -> int
+        index_mass++;
+    }else
+    {
+        func(&mass[index_mass - 1], &mass[index_mass - 2], &index_mass, &oper); // change mass
+    }
+    std::cout << mass[0] << std::endl;  
 	return 0;
 }
