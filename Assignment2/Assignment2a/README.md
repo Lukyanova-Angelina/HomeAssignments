@@ -4,7 +4,7 @@
 ## Contacts
 st128743@stdudent.spbu.ru
 ## Description
-Home assingment 2b - Reverse Polish notation; Reads a string and gets the answer of the Reverse Polish notation.
+Home assingment 2a - open file and reverse bytes array.
 ## Build
 make
 ## Run
