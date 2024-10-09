@@ -1,13 +1,15 @@
 #include <iostream>
 #include <string>
 #include "head.h"
+#include <algorithm>
 
 int main()
 {
 	std::string str;
 	int *mass;
-	mass = new int[100]; // add mass
+	
 	std::getline(std::cin, str); // read line
+    mass = new int[count(str.begin(), str.end(), ' ') ]; // add mass
 	int fp = 0; // first " "
 	int sp = 0; // second " "
 	int index_mass = 0; // index of last element of mass
@@ -48,5 +50,6 @@ int main()
         func(&mass[index_mass - 1], &mass[index_mass - 2], &index_mass, &oper); // change mass
     }
     std::cout << mass[0] << std::endl;  
+    delete [] mass;
 	return 0;
 }
