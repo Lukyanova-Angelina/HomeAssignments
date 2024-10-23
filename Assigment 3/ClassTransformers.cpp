@@ -1,20 +1,24 @@
 #include <iostream> 
 #include <string>
 #include "ClassTransformers.h"
+#include "ClassWeapon.h"
 // конструкторы и деструкторы
-Transformer::Transformer(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump): 
-    _Name(name), 
-    _Power(power), 
-    _HP(hp), 
-    _Stamina(stamina), 
-    X(x),
-    Y(y),
-    _Is_alive(alive), 
-    _Is_injured(injured), 
-    _Look_right(lr), 
-    _Is_jump(jump){}
+Transformer::Transformer(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump){
+    _Name = name; 
+    _Power = power; 
+    _HP = hp; 
+    _Stamina = stamina;
+    X = x;
+    Y = y;
+    _Is_alive = alive;
+    _Is_injured = injured;
+    _Look_right = lr; 
+    _Is_jump = jump;
+    _Weapon = new Weapon(100, 10)}
 
-Transformer::~Transformer(){};
+Transformer::~Transformer(){
+	delete _Weapon;
+};
 
 // methods
 void Transformer::Move(){
