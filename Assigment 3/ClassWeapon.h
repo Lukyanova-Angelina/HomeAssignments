@@ -16,6 +16,6 @@ public:
 	// Sets
 	void setDamage(int dmg);
 	void setDistance(int dist);
-}
+};
 
-#endf
+#endif
