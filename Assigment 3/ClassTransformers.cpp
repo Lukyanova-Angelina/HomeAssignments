@@ -1,6 +1,7 @@
 #include <iostream> 
 #include <string>
 #include "ClassAutobots.h"
+#include "ClassBullet.h"
 #include "ClassTransformers.h"
 #include "ClassWeapon.h"
 
@@ -45,6 +46,9 @@ void Transformer::Turn(){
 	}else{
 		setLookright(1);
 	}
+}
+void Transformer::ShootABullet(){
+	Bullet(getX(), getY(), getLookright());
 }
 
 // Sets

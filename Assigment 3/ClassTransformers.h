@@ -25,6 +25,7 @@ public:
 	void Move();
 	void Jump();
 	void Turn();
+	void ShootABullet();
 
 	// Sets
 	void setPower(int power);

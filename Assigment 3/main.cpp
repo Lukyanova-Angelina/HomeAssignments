@@ -5,6 +5,8 @@
 #include "ClassWeapon.h"
 #include "ClassWinx.h"
 #include "ClassDecepticons.h"
+#include "ClassBullet.h"
+
 
 int main(){
 //	Transformer Lina("Lina", 1000, 10000, 100, 100, 200, 1, 0, 1, 0);
