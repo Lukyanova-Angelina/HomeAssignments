@@ -2,9 +2,7 @@
 #define CLASSBULLET
 #include <iostream> 
 #include <string>
-#include "ClassAutobots.h"
-#include "ClassTransformers.h"
-#include "ClassWeapon.h"
+
 class Bullet
 {
 private: 

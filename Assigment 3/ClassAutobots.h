@@ -2,9 +2,8 @@
 #define CLASSAUTOBOTS
 #include <iostream> 
 #include <string>
-#include "ClassAutobots.h"
 #include "ClassTransformers.h"
-#include "ClassWeapon.h"
+
 
 
 class Autobot: public Transformer {

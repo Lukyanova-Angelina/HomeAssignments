@@ -1,9 +1,6 @@
-#include <iostream> 
-#include <string>
-#include "ClassAutobots.h"
-#include "ClassBullet.h"
+
 #include "ClassTransformers.h"
-#include "ClassWeapon.h"
+
 
 // конструкторы и деструкторы
 Transformer::Transformer(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump): _Weapon(*(new Weapon(100, 10)))
@@ -36,8 +33,10 @@ void Transformer::Move(){
 void Transformer::Jump(){
 	if (getJump() == 1){
 		setY(getY() + 1);
+		setJump(0);
 	}else{
 		setY(getY() - 1);
+		setJump(1);
 	}
 }
 void Transformer::Turn(){
@@ -67,6 +66,9 @@ void Transformer::setAlive (bool is_alive){
 void Transformer::setInjured (bool is_injured){
 	_Is_injured = is_injured;
 }
+void Transformer::setJump (bool jmp){
+	_Is_jump = jmp;
+}
 void Transformer::setX(int x){
 	X = x;
 }
@@ -75,9 +77,6 @@ void Transformer::setY(int y){
 }
 void Transformer::setLookright(bool lr){
 	_Look_right = lr;
-}
-void Transformer::setJump(bool jump){
-	_Is_jump = jump;
 }
 
 // Gets 
@@ -108,8 +107,3 @@ bool Transformer::getLookright(){
 bool Transformer::getJump(){
 	return _Is_jump;
 }
-/*
-void Transformer::info(){
-	std::cout<< _Name << " " <<_HP << " " <<_Power << " " <<_Is_alive <<std::endl;
-}
-*/

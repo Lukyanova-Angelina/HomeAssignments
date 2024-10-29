@@ -1,6 +1,8 @@
 #ifndef CLASSWEAPON
 #define CLASSWEAPON
 #include <iostream>
+#include <iostream> 
+#include <string>
 
 class Weapon{
 private:

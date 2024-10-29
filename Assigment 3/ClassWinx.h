@@ -2,10 +2,7 @@
 #define CLASSWINX
 #include <iostream> 
 #include <string>
-#include "ClassAutobots.h"
 #include "ClassTransformers.h"
-#include "ClassWeapon.h"
-#include "ClassDecepticons.h"
 
 
 class Winx: public Transformer {

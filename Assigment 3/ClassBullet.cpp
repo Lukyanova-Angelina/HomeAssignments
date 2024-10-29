@@ -1,8 +1,3 @@
-#include <iostream> 
-#include <string>
-#include "ClassAutobots.h"
-#include "ClassTransformers.h"
-#include "ClassWeapon.h"
 #include "ClassBullet.h"
 Bullet::Bullet(int x, int y, bool lr): X(x), Y(y), _LookRight(lr){}
 Bullet::~Bullet(){}

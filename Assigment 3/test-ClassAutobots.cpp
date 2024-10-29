@@ -12,7 +12,7 @@ protected:
     
     void SetUp() override {
         // Создаем объект Autobot перед каждым тестом
-        testBot = new Autobot("Bumblebee", 50, 100, 80, 0, 0, true, false, true, true, 20);
+        testBot = new Autobot("C-3PO", 50, 100, 80, 0, 0, true, false, true, true, 20);
     }
 
     void TearDown() override {
@@ -54,7 +54,9 @@ TEST_F(AutobotTest, ArmorGlowTest) {
     EXPECT_EQ(brightness, testBot->getArmorGlowBrightness());
 }
 
+/*
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
+*/

@@ -1,11 +1,6 @@
 #ifndef CLASSDECEPTICONS
 #define CLASSDECEPTICONS
-#include <iostream> 
-#include <string>
-#include "ClassAutobots.h"
 #include "ClassTransformers.h"
-#include "ClassWeapon.h"
-
 
 class Decepticon: public Transformer {
 private:

@@ -1,7 +1,5 @@
 /*128743*/
 
-#include <iostream> 
-#include <string>
 #include "ClassWeapon.h"
 
 
