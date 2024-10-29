@@ -6,3 +6,4 @@ ClassTransformers.o: ClassTransformers.cpp ClassWeapon.cpp ClassAutobots.cpp mai
 	g++ -c ClassTransformers.cpp ClassWeapon.cpp ClassAutobots.cpp main.cpp ClassDecepticons.cpp ClassWinx.cpp ClassBullet.cpp
 clean:
 	rm -rf *.o prog
+
