@@ -14,24 +14,22 @@ protected:
     }
 };
 
-// Тестирование конструктора
+// test constructor
 TEST_F(WeaponTest, ConstructorTest) {
     EXPECT_EQ(weapon->getDamage(), 100);
     EXPECT_EQ(weapon->getDistance(), 150);
 }
 
-// Тестирование метода set/get Distance
+// test set/get Distance
 TEST_F(WeaponTest, DistanceTest) {
     int dist = 120;
     weapon->setDistance(dist);
     EXPECT_EQ(dist, weapon->getDistance());
 }
 
-// Тестирование метода set/get Damage
+// test set/get Damage
 TEST_F(WeaponTest, DamageTest) {
     int dmg = 170;
     weapon->setDamage(dmg);
     EXPECT_EQ(dmg, weapon->getDamage());
 }
-
-

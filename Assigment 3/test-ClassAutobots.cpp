@@ -11,16 +11,16 @@ protected:
     Autobot* testBot;
     
     void SetUp() override {
-        // Создаем объект Autobot перед каждым тестом
+        //make object
         testBot = new Autobot("C-3PO", 50, 100, 80, 0, 0, true, false, true, true, 20);
     }
 
     void TearDown() override {
-        delete testBot; // Удаляем объект после каждого теста
+        delete testBot;
     }
 };
 
-// Тестирование конструктора
+// test constructor
 TEST_F(AutobotTest, ConstructorTest) {
     EXPECT_EQ(testBot->getPower(), 50);
     EXPECT_EQ(testBot->getHP(), 100);
@@ -29,34 +29,27 @@ TEST_F(AutobotTest, ConstructorTest) {
     EXPECT_FALSE(testBot->getInjured());
     EXPECT_TRUE(testBot->getLookright());
     EXPECT_TRUE(testBot->getJump());
-    EXPECT_EQ(testBot->getArmorGlowBrightness(), 20); // Яркость свечения брони
+    EXPECT_EQ(testBot->getArmorGlowBrightness(), 20);
 }
 
-// Тестируем метод transform()
+// test transform()
 TEST_F(AutobotTest, TransformTest) {   
     testing::internal::CaptureStdout();
-    testBot->transform(); // Вызываем метод
-    std::string output = testing::internal::GetCapturedStdout(); // Захват вывода
-    ASSERT_STREQ(output.c_str(), "Success transformation to autobot!!!"); // Сравниваем вывод
+    testBot->transform();
+    std::string output = testing::internal::GetCapturedStdout(); 
+    ASSERT_STREQ(output.c_str(), "Success transformation to autobot!!!"); 
 }
 
-// Тест метода Dig()
+// test Dig()
 TEST_F(AutobotTest, DigTest) {  
     int initialY = testBot->getY();
     testBot->Dig();
     EXPECT_EQ(initialY - 1, testBot->getY()); // Проверяем изменение координаты Y
 }
 
-// Тест методов set/get ArmorGlowBrightness
+// test set/get ArmorGlowBrightness
 TEST_F(AutobotTest, ArmorGlowTest) { 
     int brightness = 30;
     testBot->setArmorGlowBrightness(brightness);
     EXPECT_EQ(brightness, testBot->getArmorGlowBrightness());
 }
-
-/*
-int main(int argc, char** argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
-*/

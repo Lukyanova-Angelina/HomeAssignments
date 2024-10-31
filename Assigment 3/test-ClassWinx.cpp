@@ -14,7 +14,7 @@ protected:
     }
 };
 
-// Тестирование конструктора
+// test constructor
 TEST_F(WinxTest, ConstructorTest) {
     EXPECT_EQ(winx->getPower(), 100);
     EXPECT_EQ(winx->getHP(), 200);
@@ -28,7 +28,7 @@ TEST_F(WinxTest, ConstructorTest) {
 }
 
 
-// Тестируем метод transform()
+// test transform()
 TEST_F(WinxTest, TransformTest) {   
     testing::internal::CaptureStdout();
     winx->transform(); // Вызываем метод
@@ -38,7 +38,7 @@ TEST_F(WinxTest, TransformTest) {
 
 
 
-// Тестирование метода teleport()
+// test teleport()
 TEST_F(WinxTest, teleportTest) {
     int initialX = winx->getX();
     winx->teleport();

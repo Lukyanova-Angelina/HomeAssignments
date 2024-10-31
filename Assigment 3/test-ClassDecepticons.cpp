@@ -14,7 +14,7 @@ protected:
     }
 };
 
-// Тестирование конструктора
+// test constructor
 TEST_F(DecepticonTest, ConstructorTest) {
     EXPECT_EQ(decepticon->getPower(), 100);
     EXPECT_EQ(decepticon->getHP(), 200);
@@ -29,7 +29,7 @@ TEST_F(DecepticonTest, ConstructorTest) {
 
 
 
-// Тестируем метод transform()
+// test transform()
 TEST_F(DecepticonTest, TransformTest) {   
     testing::internal::CaptureStdout();
     decepticon->transform(); // Вызываем метод

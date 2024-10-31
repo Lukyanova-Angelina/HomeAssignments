@@ -14,7 +14,7 @@ protected:
     }
 };
 
-// Тестирование конструктора
+// test constructor
 TEST_F(BulletTest, ConstructorTest) {
     EXPECT_EQ(bullet->getX(), 0);
     EXPECT_EQ(bullet->getY(), 10);
@@ -22,14 +22,14 @@ TEST_F(BulletTest, ConstructorTest) {
 
 }
 
-// Тестирование метода set/get X
+// test set/get X
 TEST_F(BulletTest, XTest) {
     int x = 12;
     bullet->setX(x);
     EXPECT_EQ(x, bullet->getX());
 }
 
-// Тестирование метода set/get Y
+// test set/get Y
 TEST_F(BulletTest, YTest) {
     int y = 155;
     bullet->setY(y);

@@ -2,7 +2,7 @@
 #include "ClassTransformers.h"
 
 
-// конструкторы и деструкторы
+// constructor and destructor
 Transformer::Transformer(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump): _Weapon(*(new Weapon(100, 10)))
 {
     _Name = name; 
