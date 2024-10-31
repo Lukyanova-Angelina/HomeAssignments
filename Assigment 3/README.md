@@ -8,4 +8,4 @@ Home assingment 3
 ## Build
 make
 ## Run
-./mf
+./prog
