@@ -1,15 +1,14 @@
-#include <iostream>
-#include <string>
+
 #include "head.h"
 #include <algorithm>
 
 int main()
 {
 	std::string str;
-	int *mass;
+	float *mass;
 	
 	std::getline(std::cin, str); // read line
-    mass = new int[count(str.begin(), str.end(), ' ') ]; // add mass
+    mass = new float[count(str.begin(), str.end(), ' ') ]; // add mass
 	int fp = 0; // first " "
 	int sp = 0; // second " "
 	int index_mass = 0; // index of last element of mass
@@ -31,7 +30,7 @@ int main()
         	}
         	if(operand(oper)) // if number
         	{
-        		mass[index_mass] = std::stoi(oper); // string -> int
+        		mass[index_mass] = std::stof(oper); // string -> float
         		index_mass++;
         	}
         	else // if operation
@@ -43,7 +42,7 @@ int main()
     oper = str.substr(sp + 1, str.size() - sp);
     if(operand(oper)) // если число
     {
-        mass[index_mass] = std::stoi(oper); // string -> int
+        mass[index_mass] = std::stof(oper); // string -> float
         index_mass++;
     }else
     {

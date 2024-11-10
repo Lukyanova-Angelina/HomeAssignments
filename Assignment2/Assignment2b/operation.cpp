@@ -1,8 +1,6 @@
-#include <iostream>
-#include <string>
 #include "head.h"
 
-void func(int *a, int *b, int *index_mass, std::string *z) // returns calculated value depended on operation
+void func(float *a, float *b, int *index_mass, std::string *z) // returns calculated value depended on operation
 {
 	if (*z == "+") // if +
 	{
