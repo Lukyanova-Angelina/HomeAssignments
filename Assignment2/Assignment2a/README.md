@@ -5,6 +5,7 @@
 st128743@stdudent.spbu.ru
 ## Description
 Home assingment 2a - open file and reverse bytes array.
+write filename
 ## Build
 make
 ## Run
