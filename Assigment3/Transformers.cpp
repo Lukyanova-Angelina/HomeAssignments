@@ -3,11 +3,11 @@ Lukyanova Angelina st128743@student.spbu.ru
 Problem 3
 */
 
-#include "ClassTransformers.h"
+#include "Transformers.h"
 
 
 // constructor and destructor
-Transformer::Transformer(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump): _Weapon(*(new Weapon(100, 10)))
+Transformer::Transformer(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump): _Weapon(*(new Weapon(100, 10))), _Storage(*(new ItemStorage()))
 {
     _Name = name;
     _Power = power;

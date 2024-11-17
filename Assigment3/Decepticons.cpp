@@ -2,10 +2,12 @@
 Lukyanova Angelina st128743@student.spbu.ru
 Problem 3
 */
-#include "ClassDecepticons.h"
+#include "Decepticons.h"
 
 
-Decepticon::Decepticon(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump, int rang, int flight_altitude): Transformer(name, power, hp, stamina, x, y, alive, injured, lr, jump), _Rang(rang), _Flight_altitude(flight_altitude), _Weapon(*(new Weapon(100, 10))) {}
+Decepticon::Decepticon(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump, int rang, int fl): Transformer(name, power, hp, stamina, x, y, alive, injured, lr, jump), _Rang(rang), _Flight_altitude(fl), _Weapon(*(new Weapon(100, 10))), _Storage(*(new ItemStorage())) {
+    
+}
 void Decepticon::transform()
 {
     std::cout<<"Success transformation to Decepticon!!!";

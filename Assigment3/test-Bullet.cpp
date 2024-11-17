@@ -3,7 +3,7 @@ Lukyanova Angelina st128743@student.spbu.ru
 Problem 3
 */
 #include <gtest/gtest.h>
-#include "ClassBullet.h"
+#include "Bullet.h"
 
 class BulletTest : public ::testing::Test
 {

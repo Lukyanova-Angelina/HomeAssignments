@@ -2,9 +2,9 @@
 Lukyanova Angelina st128743@student.spbu.ru
 Problem 3
 */
-#ifndef CLASSDECEPTICONS
-#define CLASSDECEPTICONS
-#include "ClassTransformers.h"
+#ifndef DECEPTICONS
+#define DECEPTICONS
+#include "Transformers.h"
 
 class Decepticon: public Transformer
 {
@@ -13,10 +13,13 @@ private:
     int _Power, _HP, _Stamina, X, Y;
     bool _Is_alive, _Is_injured, _Look_right, _Is_jump;
     Weapon& _Weapon;
-    int _Rang, _Flight_altitude;
+    int _Rang;
+    int _Flight_altitude;
+    ItemStorage& _Storage;
+
 
 public:
-    Decepticon(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump, int rang, int fl);
+    Decepticon(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump, int rang, int flight_altitude);
     void transform();
     void fly();
 

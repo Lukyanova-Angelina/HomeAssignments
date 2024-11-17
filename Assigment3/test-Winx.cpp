@@ -3,7 +3,7 @@ Lukyanova Angelina st128743@student.spbu.ru
 Problem 3
 */
 #include <gtest/gtest.h>
-#include "ClassWinx.h"
+#include "Winx.h"
 
 class WinxTest : public ::testing::Test
 {

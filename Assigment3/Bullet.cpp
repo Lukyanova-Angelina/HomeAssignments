@@ -2,7 +2,7 @@
 Lukyanova Angelina st128743@student.spbu.ru
 Problem 3
 */
-#include "ClassBullet.h"
+#include "Bullet.h"
 Bullet::Bullet(int x, int y, bool lr): X(x), Y(y), _LookRight(lr) {}
 Bullet::~Bullet() {}
 

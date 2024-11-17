@@ -1,43 +1,33 @@
-PROJECT = transformer
-LIBPROJECT = $(PROJECT).a
-TESTPROJECT = test-$(PROJECT)
+PROJECT=transformer
+IDIR=.
+CXX=g++
+CXXFLAGS=-I$(IDIR) -Wall -Wpedantic 
+LDFLAGS=-lgtest 
+OBJECT_FILES=Autobots.o Transformers.o Bullet.o Weapon.o Winx.o ItemStorage.o Decepticons.o 
 
-CXX = g++
-AR = ar
-ARFLAGS = rsv
-CXXFLAGS = -Wall -std=c++17 
-LDXXFLAGS = $(CXXFLAGS)
-LDTESTFLAGS = $(LDXXFLAGS) -lgtest
+DEPS=Autobots.h Transformers.h Winx.h Bullet.h ItemStorage.h Weapon.h
 
-HEADERS = $(wildcard *.h)
-OBJ = main.o Autobots.o Bullet.o Decepticons.o Transformers.o Weapon.o Winx.o 
-TEST_OBJ = test-Autobots.o test-Bullet.o test-Decepticons.o test-Transformers.o test-Weapon.o test-Winx.o test.o
+TEST_DIR=.
+TEST_FILES=$(wildcard $(TEST_DIR)/test*.cpp)
+TEST_OBJECTS=$(TEST_FILES:.cpp=.o) $(OBJECT_FILES)
+all: $(PROJECT);
+default: all;
 
-.PHONY: main
-main: all;
-
-%.o: %.cpp $(HEADERS)
-    $(CXX) -c -o $@ $< $(CXXFLAGS)
-
-$(LIBPROJECT): $(OBJ)
-    $(AR) $(ARFLAGS) $@ $^
-
-$(PROJECT): main.o $(LIBPROJECT)
-    $(CXX) -o $@ main.o $(LDXXFLAGS)
-
-$(TESTPROJECT): $(LIBPROJECT) $(TEST_OBJ)
-    $(CXX) -o $@ $(TEST_OBJ) $(LDTESTFLAGS)
-
-test: $(TESTPROJECT)
-
-all: $(PROJECT)
-
-.PHONY: clean
+%.o: %.cpp $(DEPS)
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
 clean:
-    rm -f *.o
+	rm -f $(PROJECT) $(TEST_DIR)/*.o *.o
+format:
+	find . \( -name '*.cpp' -o -name '*.h' \) -exec clang-format -i {} \;
+$(PROJECT):
+	@echo 'print "make test" to test classes';
 
-.PHONY: cleanall
-cleanall:
-    rm -f $(PROJECT)
-    rm -f $(LIBPROJECT)
-    rm -f $(TESTPROJECT)
+
+test: $(TEST_OBJECTS)
+	$(CXX) -o run_tests $^ $(LDFLAGS)
+	./run_tests
+	
+
+$(TEST_DIR)/test-%.o: $(TEST_DIR)/test-%.cpp $(DEPS)
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
+.PHONY: clean format $(PROJECT)

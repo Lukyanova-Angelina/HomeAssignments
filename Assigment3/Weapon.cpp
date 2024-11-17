@@ -2,7 +2,7 @@
 Lukyanova Angelina st128743@student.spbu.ru
 Problem 3
 */
-#include "ClassWeapon.h"
+#include "Weapon.h"
 
 
 Weapon::Weapon(int damage, int dist):

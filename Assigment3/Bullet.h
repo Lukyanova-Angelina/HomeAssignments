@@ -2,8 +2,8 @@
 Lukyanova Angelina st128743@student.spbu.ru
 Problem 3
 */
-#ifndef CLASSBULLET
-#define CLASSBULLET
+#ifndef BULLET
+#define BULLET
 #include <iostream>
 #include <string>
 

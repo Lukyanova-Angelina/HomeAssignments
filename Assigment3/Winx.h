@@ -6,7 +6,7 @@ Problem 3
 #define CLASSWINX
 #include <iostream>
 #include <string>
-#include "ClassTransformers.h"
+#include "Transformers.h"
 
 
 class Winx: public Transformer
@@ -18,6 +18,8 @@ private:
     Weapon& _Weapon;
     std::string _Color_of_Wings;
     int _Speed;
+    ItemStorage& _Storage;
+
 
 public:
     Winx(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump, std::string color_of_wings, int speed);

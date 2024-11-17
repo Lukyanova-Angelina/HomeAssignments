@@ -2,12 +2,13 @@
 Lukyanova Angelina st128743@student.spbu.ru
 Problem 3
 */
-#ifndef CLASSTRANSFORMERS
-#define CLASSTRANSFORMERS
+#ifndef TRANSFORMERS
+#define TRANSFORMERS
 #include <iostream>
 #include <string>
-#include "ClassWeapon.h"
-#include "ClassBullet.h"
+#include "Weapon.h"
+#include "Bullet.h"
+#include "ItemStorage.h"
 
 class Transformer
 {
@@ -16,6 +17,7 @@ private:
     int _Power, _HP, _Stamina, X, Y;
     bool _Is_alive, _Is_injured, _Look_right, _Is_jump;
     Weapon& _Weapon;
+    ItemStorage& _Storage;
 
 public:
     // Constructor and destructor

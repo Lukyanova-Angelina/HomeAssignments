@@ -2,9 +2,8 @@
 Lukyanova Angelina st128743@student.spbu.ru
 Problem 3
 */
-#ifndef CLASSWEAPON
-#define CLASSWEAPON
-#include <iostream>
+#ifndef WEAPON
+#define WEAPON
 #include <iostream>
 #include <string>
 

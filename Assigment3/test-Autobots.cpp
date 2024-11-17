@@ -4,10 +4,10 @@ Problem 3
 */
 #include <iostream>
 #include <string>
-#include "ClassAutobots.h"
-#include "ClassBullet.h"
-#include "ClassTransformers.h"
-#include "ClassWeapon.h"
+#include "Autobots.h"
+#include "Bullet.h"
+#include "Transformers.h"
+#include "Weapon.h"
 #include <gtest/gtest.h>
 class AutobotTest : public ::testing::Test
 {
