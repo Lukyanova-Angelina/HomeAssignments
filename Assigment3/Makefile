@@ -1,7 +1,7 @@
 PROJECT=transformer
 IDIR=.
 CXX=g++
-CXXFLAGS=-I$(IDIR) -Wall -Wpedantic 
+CXXFLAGS=-I$(IDIR) -Werror -Wpedantic -Wall
 LDFLAGS=-lgtest 
 OBJECT_FILES=Autobots.o Transformers.o Bullet.o Weapon.o Winx.o ItemStorage.o Decepticons.o 
 
@@ -26,6 +26,7 @@ $(PROJECT):
 test: $(TEST_OBJECTS)
 	$(CXX) -o run_tests $^ $(LDFLAGS)
 	./run_tests
+	
 	
 
 $(TEST_DIR)/test-%.o: $(TEST_DIR)/test-%.cpp $(DEPS)
