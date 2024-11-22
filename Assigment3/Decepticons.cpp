@@ -5,7 +5,7 @@ Problem 3
 #include "Decepticons.h"
 
 
-Decepticon::Decepticon(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump, int rang, int fl): Transformer(name, power, hp, stamina, x, y, alive, injured, lr, jump), _Rang(rang), _Flight_altitude(fl), _Weapon(*(new Weapon(100, 10))), _Storage(*(new ItemStorage())) {
+Decepticon::Decepticon(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump, int rang, int fl): Transformer(name, power, hp, stamina, x, y, alive, injured, lr, jump), _Weapon(*(new Weapon(100, 10))), _Rang(rang), _Flight_altitude(fl), _Storage(*(new ItemStorage())) {
     
 }
 void Decepticon::transform()

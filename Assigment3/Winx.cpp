@@ -6,7 +6,7 @@ Problem 3
 
 
 
-Winx::Winx(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump, std::string color, int speed): Transformer(name, power, hp, stamina, x, y, alive, injured, lr, jump), _Color_of_Wings(color), _Speed(speed), _Weapon(*(new Weapon(100, 10))), _Storage(*(new ItemStorage())) {}
+Winx::Winx(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump, std::string color, int speed): Transformer(name, power, hp, stamina, x, y, alive, injured, lr, jump), _Weapon(*(new Weapon(100, 10))),  _Color_of_Wings(color), _Speed(speed), _Storage(*(new ItemStorage())) {}
 
 void Winx::transform()
 {
