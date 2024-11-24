@@ -1,6 +1,6 @@
 /* 
 Lukyanova Angelina st128743@student.spbu.ru
-Problem 3
+Problem 4
 */
 #include "Weapon.h"
 
@@ -8,6 +8,11 @@ Problem 3
 Weapon::Weapon(int damage, int dist):
     _Damage(damage),
     _Distance(dist) {}
+
+Weapon::Weapon():
+    _Damage(100),
+    _Distance(10) {}
+
 
 Weapon::~Weapon() {};
 

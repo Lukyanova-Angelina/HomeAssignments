@@ -1,6 +1,6 @@
 /* 
 Lukyanova Angelina st128743@student.spbu.ru
-Problem 3
+Problem 4
 */
 #ifndef WEAPON
 #define WEAPON
@@ -13,6 +13,7 @@ private:
     int _Damage, _Distance;
 public:
     Weapon(int damage, int dist);
+    Weapon();
     ~Weapon();
 
     // Gets

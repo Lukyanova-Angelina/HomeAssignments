@@ -1,6 +1,6 @@
 /* 
 Lukyanova Angelina st128743@student.spbu.ru
-Problem 3
+Problem 4
 */
 #ifndef TRANSFORMERS
 #define TRANSFORMERS
@@ -31,6 +31,11 @@ public:
     void Turn();
     void ShootABullet();
     bool operator==(Transformer& b);
+    bool operator>(Transformer& b);
+    bool operator<(Transformer& b);
+    bool operator>=(Transformer& b);
+    bool operator<=(Transformer& b);
+    bool operator!=(Transformer& b);
 
 
     // Sets
@@ -45,6 +50,7 @@ public:
     void setJump(bool jump);
 
     // Gets
+    std::string getName();
     int getPower();
     int getHP();
     int getStamina();
@@ -56,4 +62,6 @@ public:
     bool getJump();
 
 };
+
+std::ostream & operator<<(std::ostream & os, Transformer& n);
 #endif

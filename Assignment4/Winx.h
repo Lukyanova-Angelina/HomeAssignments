@@ -1,6 +1,6 @@
 /* 
 Lukyanova Angelina st128743@student.spbu.ru
-Problem 3
+Problem 4
 */
 #ifndef CLASSWINX
 #define CLASSWINX
@@ -23,7 +23,7 @@ private:
 
 public:
     Winx(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump, std::string color_of_wings, int speed);
-
+    Winx(int power, int hp, std::string color_of_wings, int speed);
     void transform();
     void teleport();
 

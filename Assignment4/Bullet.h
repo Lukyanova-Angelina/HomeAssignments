@@ -1,6 +1,6 @@
 /* 
 Lukyanova Angelina st128743@student.spbu.ru
-Problem 3
+Problem 4
 */
 #ifndef BULLET
 #define BULLET
@@ -14,6 +14,7 @@ private:
     bool _LookRight;
 public:
     Bullet(int x, int y, bool lr);
+    Bullet();
     ~Bullet();
 
     void Bump();

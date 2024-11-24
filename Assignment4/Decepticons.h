@@ -1,6 +1,6 @@
 /* 
 Lukyanova Angelina st128743@student.spbu.ru
-Problem 3
+Problem 4
 */
 #ifndef DECEPTICONS
 #define DECEPTICONS
@@ -20,6 +20,7 @@ private:
 
 public:
     Decepticon(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump, int rang, int flight_altitude);
+    Decepticon(int power, int hp, int rang, int flight_altitude);
     void transform();
     void fly();
 

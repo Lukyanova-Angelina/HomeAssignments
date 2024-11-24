@@ -1,6 +1,6 @@
 /* 
 Lukyanova Angelina st128743@student.spbu.ru
-Problem 3
+Problem 4
 */
 #ifndef ITEMSTORAGE
 #define ITEMSTORAGE
@@ -13,7 +13,8 @@ private:
     int sizeofWeaponStorage;
 
 public:
-    ItemStorage(int sizeofWeaponStorage = 10);
+    ItemStorage(int sizeofWeaponStorage);
+    ItemStorage();
     ~ItemStorage();
 
     int getsizeofWeaponStorage();

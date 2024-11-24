@@ -1,6 +1,6 @@
 /* 
 Lukyanova Angelina st128743@student.spbu.ru
-Problem 3
+Problem 4
 */
 #ifndef AUTOBOTS
 #define AUTOBOTS
@@ -23,6 +23,7 @@ private:
 
 public:
     Autobot(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump, int bright);
+    Autobot(int power, int hp, int bright);
 //methods
     void transform();
     void Dig();

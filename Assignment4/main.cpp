@@ -1,43 +1,14 @@
 #include <iostream>
 
 #include "Transformers.h"
-
-/*
-bool operator==(Transformer a, Transformer b)
-{
-    return a.getPower() == b.getPower();
-};
-bool operator>(Transformer a, Transformer b)
-{
-    return a.getPower() > b.getPower();
-};
-bool operator>=(Transformer a, Transformer b)
-{
-    return (a==b)||(a>b);
-};
-
-bool operator!=(Transformer a, Transformer b)
-{
-    return !(a==b);
-};
-bool operator<(Transformer a, Transformer b)
-{
-    return (!(a==b) || !(a>b));
-};
-*/
-
+#include "Winx.h"
 
 int main(){
-	Transformer a;
-	Transformer b;
-	a = Transformer(10, 10);
-	b = Transformer(10, 10);
-	if (a == b){
-		std::cout<<"true";
-	}else{
-		std::cout<<"false"<<a->getPower()<< " " << b->getPower()<<std::endl;
-	}
-	delete a, b;
+	Transformer a(10, 10);
+	Transformer b(10, 10);	
+	std::cout<<a;
+	Winx qw(100, 10, "pink", 10);
+	std::cout<<qw;
 	return 0;
 
 }

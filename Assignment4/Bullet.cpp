@@ -1,9 +1,10 @@
 /* 
 Lukyanova Angelina st128743@student.spbu.ru
-Problem 3
+Problem 4
 */
 #include "Bullet.h"
 Bullet::Bullet(int x, int y, bool lr): X(x), Y(y), _LookRight(lr) {}
+Bullet::Bullet():X(0), Y(0), _LookRight(true){}
 Bullet::~Bullet() {}
 
 void Bullet::Bump()

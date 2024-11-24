@@ -1,6 +1,6 @@
 /* 
 Lukyanova Angelina st128743@student.spbu.ru
-Problem 3
+Problem 4
 */
 
 #include "Transformers.h"
@@ -121,6 +121,9 @@ void Transformer::setLookright(bool lr)
 }
 
 // Gets
+std::string Transformer::getName(){
+    return _Name;
+}
 int Transformer::getPower()
 {
     return _Power;
@@ -162,23 +165,31 @@ bool Transformer::getJump()
 bool Transformer::operator==(Transformer& b)
 {
     return _Power == b.getPower();
-};
-/*
-bool operator>(Transformer a, Transformer b)
-{
-    return a.getPower() > b.getPower;
-};
-bool operator>=(Transformer a, Transformer b)
-{
-    return (a==b)||(a>b);
-};
+}
 
-bool operator!=(Transformer a, Transformer b)
+bool Transformer::operator>(Transformer& b)
 {
-    return !(a==b);
-};
-bool operator<(Transformer a, Transformer b)
+    return _Power > b.getPower();
+}
+bool Transformer::operator>=(Transformer& b)
 {
-    return (!(a==b) || !(a>b));
-};
-*/
+    return (_Power==b.getPower())||(_Power>b.getPower());
+}
+bool Transformer::operator<(Transformer& b)
+{
+    return (!(_Power==b.getPower()) || !(_Power>b.getPower()));
+}
+bool Transformer::operator<=(Transformer& b)
+{
+    return (_Power==b.getPower())||(_Power<b.getPower());
+}
+
+bool Transformer::operator!=(Transformer& b)
+{
+    return !(_Power==b.getPower());
+}
+    
+std::ostream & operator<<(std::ostream & os, Transformer& n)
+{
+    return os <<"Transformer"<<std::endl<< "Name: "<<n.getName()<<std::endl<< "Power: "<<n.getPower()<<std::endl<< "HP: "<<n.getHP()<<std::endl<< "Stamina: "<<n.getStamina()<<std::endl<< "Koords: ("<<n.getX()<< ", "<<n.getY()<<")"<<std::endl<< "Alive: "<<n.getAlive()<<std::endl<< "Injured: "<<n.getInjured()<<std::endl<< "Looking right: "<<n.getLookright()<<std::endl<< "Jump: "<<n.getJump()<<std::endl<<std::endl;
+}
