@@ -63,13 +63,6 @@ TEST_F(TransformerTest, TurnTest)
     EXPECT_NE(initialLR, transformer->getLookright()); // Проверяем поворот
 }
 
-// test ShootABullet()
-TEST_F(TransformerTest, ShootABulletTest)
-{
-    // Поскольку Bullet создается локально, проверка может заключаться в проверке наличия соответствующих параметров
-    // Например, можно добавить логику в Bullet для отслеживания создания экземпляров
-}
-
 // test set/get Power
 TEST_F(TransformerTest, PowerTest)
 {

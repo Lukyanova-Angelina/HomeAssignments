@@ -67,9 +67,4 @@ TEST_F(WinxTest, SpeedTest)
     winx->setSpeed(555);
     EXPECT_EQ(555, winx->getSpeed());
 }
-/*
-int main(int argc, char** argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
-*/
+

@@ -61,9 +61,4 @@ TEST_F(DecepticonTest, SpeedTest)
     decepticon->set_Flight_altitude(15);
     EXPECT_EQ(15, decepticon->get_Flight_altitude());
 }
-/*
-int main(int argc, char** argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
-*/
+
