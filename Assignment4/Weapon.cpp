@@ -1,4 +1,4 @@
-/* 
+/*
 Lukyanova Angelina st128743@student.spbu.ru
 Problem 4
 */
@@ -31,4 +31,8 @@ void Weapon::setDamage(int dmg)
 void Weapon::setDistance(int dist)
 {
     _Distance = dist;
+}
+std::ostream & operator<<(std::ostream & os, Weapon& n)
+{
+    return os <<"Weapon"<<std::endl<< "Damage: "<<n.getDamage()<<std::endl<< "Distance: "<<n.getDistance()<<std::endl;
 }

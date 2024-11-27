@@ -1,4 +1,4 @@
-/* 
+/*
 Lukyanova Angelina st128743@student.spbu.ru
 Problem 4
 */
@@ -121,7 +121,8 @@ void Transformer::setLookright(bool lr)
 }
 
 // Gets
-std::string Transformer::getName(){
+std::string Transformer::getName()
+{
     return _Name;
 }
 int Transformer::getPower()
@@ -188,7 +189,7 @@ bool Transformer::operator!=(Transformer& b)
 {
     return !(_Power==b.getPower());
 }
-    
+
 std::ostream & operator<<(std::ostream & os, Transformer& n)
 {
     return os <<"Transformer"<<std::endl<< "Name: "<<n.getName()<<std::endl<< "Power: "<<n.getPower()<<std::endl<< "HP: "<<n.getHP()<<std::endl<< "Stamina: "<<n.getStamina()<<std::endl<< "Koords: ("<<n.getX()<< ", "<<n.getY()<<")"<<std::endl<< "Alive: "<<n.getAlive()<<std::endl<< "Injured: "<<n.getInjured()<<std::endl<< "Looking right: "<<n.getLookright()<<std::endl<< "Jump: "<<n.getJump()<<std::endl<<std::endl;

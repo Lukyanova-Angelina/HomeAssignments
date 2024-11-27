@@ -1,10 +1,10 @@
-/* 
+/*
 Lukyanova Angelina st128743@student.spbu.ru
 Problem 4
 */
 #include "Bullet.h"
 Bullet::Bullet(int x, int y, bool lr): X(x), Y(y), _LookRight(lr) {}
-Bullet::Bullet():X(0), Y(0), _LookRight(true){}
+Bullet::Bullet():X(0), Y(0), _LookRight(true) {}
 Bullet::~Bullet() {}
 
 void Bullet::Bump()
@@ -36,4 +36,8 @@ int Bullet::getY()
 bool Bullet::getLookRight()
 {
     return _LookRight;
+}
+std::ostream & operator<<(std::ostream & os, Bullet& n)
+{
+    return os <<"Bullet"<<std::endl<< "Koords: ("<<n.getX() <<", "<< n.getY()<<")"<<std::endl<< "Shoots to the right: "<<n.getLookRight()<<std::endl;
 }

@@ -28,5 +28,5 @@ public:
     bool getLookRight();
 
 };
-
+std::ostream & operator<<(std::ostream & os, Bullet& n);
 #endif

@@ -24,5 +24,5 @@ public:
     void setDamage(int dmg);
     void setDistance(int dist);
 };
-
+std::ostream & operator<<(std::ostream & os, Weapon& n);
 #endif

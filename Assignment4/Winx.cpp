@@ -1,4 +1,4 @@
-/* 
+/*
 Lukyanova Angelina st128743@student.spbu.ru
 Problem 4
 */

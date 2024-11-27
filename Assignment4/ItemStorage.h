@@ -23,5 +23,6 @@ public:
     void deleteWeapon(int index);
 
 };
+std::ostream & operator<<(std::ostream & os, ItemStorage& n);
 
 #endif
