@@ -8,4 +8,4 @@ Home assingment 5
 ## Build
 make
 ## Run
-make test
+./transformer
