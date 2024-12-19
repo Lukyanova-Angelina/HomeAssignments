@@ -19,7 +19,7 @@ public:
     // Constructor and destructor
     Transformer(std::string name, int power, int hp, int stamina, int x, int y, bool alive, bool injured, bool lr, bool jump);
     Transformer(int power, int hp);
-    ~Transformer();
+    virtual ~Transformer();
 
     // methods
     void Move();

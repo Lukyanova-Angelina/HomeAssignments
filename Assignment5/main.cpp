@@ -27,33 +27,33 @@ int main(){
 	c.ulta();
 	Transformer *ptr;
 	std::cout<<std::endl<<"Test calling Decepticon methods through a pointer typed by the base class"<<std::endl;
-    ptr = new Decepticon(100, 10, 10, 10);
-    ptr->transform();  
-    ptr->ability();    
-    ptr->ulta();       
-    delete ptr;
-    std::cout<<std::endl<<"Test calling Autobot methods through a pointer typed by the base class"<<std::endl;
-    ptr = new Autobot(100, 10, 10);
-    ptr->transform();  
-    ptr->ability();    
-    ptr->ulta();       
-    delete ptr;
-    std::vector<Transformer*> objects;
-    for(int i = 0; i < 3; i++)
-    {
-    	objects.push_back(new Transformer(100, 100));
-    	objects.push_back(new Decepticon(100, 100, 10, 10));
-    	objects.push_back(new Autobot(100, 100, 10));
-    }
-    for(auto bot : objects)
-    {
-    	std::cout<<std::endl<<typeid(*bot).name()<<std::endl;
-    	bot->transform();
-    	bot->ability();
-    	bot->ulta();
-    }
-    for (auto bot : objects) {
-        delete bot;
-    }
+	ptr = new Decepticon(100, 10, 10, 10);
+	ptr->transform();
+	ptr->ability();	
+	ptr->ulta();	
+	delete ptr;
+	std::cout<<std::endl<<"Test calling Autobot methods through a pointer typed by the base class"<<std::endl;
+	ptr = new Autobot(100, 10, 10);
+	ptr->transform();									
+	ptr->ability();	
+	ptr->ulta();	
+	delete ptr;
+	std::vector<Transformer*> objects;
+	for(int i = 0; i < 3; i++)
+	{
+		objects.push_back(new Transformer(100, 100));
+		objects.push_back(new Decepticon(100, 100, 10, 10));
+		objects.push_back(new Autobot(100, 100, 10));
+	}
+	for(auto bot : objects)
+	{
+		std::cout<<std::endl<<typeid(*bot).name()<<std::endl;
+		bot->transform();
+		bot->ability();
+		bot->ulta();
+	}
+	for (auto bot : objects) {
+		delete bot;
+	}
 	return 0;
 }
